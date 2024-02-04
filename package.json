@@ -2,10 +2,10 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
-    "dev": "nodemon -r dotenv/config src/index.js dotenv_config_path=.env"
+    "start": "node index.js",
+    "dev": "nodemon -r dotenv/config index.js dotenv_config_path=.env"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +17,5 @@
   "devDependencies": {
     "dotenv": "^16.4.1",
     "nodemon": "^3.0.3"
-  },
-  "type": "module"
+  }
 }

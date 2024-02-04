@@ -1,5 +1,5 @@
-import express from "express";
-import { Deta } from "deta";
+const express = require("express");
+const { Deta } = require("deta");
  
 const api = express.Router();
 
@@ -55,4 +55,4 @@ api.route("/post/:id")
             });
     });
 
-export default api;
+module.exports = api;
