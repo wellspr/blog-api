@@ -17,7 +17,15 @@ api.route("/posts")
             });
     })
     .post((req, res) => {
-        db.put(req.body)
+
+        const newPost = {
+            ...req.body, 
+            createdAt: Date.now(),
+            updatedAt: undefined,
+            deleted: false,
+        };
+
+        db.put(newPost)
             .then(r => {
                 res.json(r);
             })
@@ -37,7 +45,13 @@ api.route("/post/:id")
             });
     })
     .put((req, res) => {
-        db.update(req.body, req.params.id)
+
+        const update = { 
+            ...req.body,
+            updatedAt: Date.now(),
+        };
+
+        db.update(update, req.params.id)
             .then(r => {
                 res.json(r);
             })

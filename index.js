@@ -14,7 +14,7 @@ app.use("/", (req, res, next) => {
     if (headerAuth || queryStrAuth) {
         next()
     } else {
-        res.status(401).json({ response: "Anauthorized" });
+        res.status(401).json({ response: "Unauthorized" });
     }
 });
 
